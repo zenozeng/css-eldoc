@@ -38,7 +38,11 @@
 	       (property (buffer-substring-no-properties beg end)))
 
 	  (setq property (replace-regexp-in-string " " "" property))
-	  (gethash property css-eldoc-hash-table))))))
+
+
+	  (replace-regexp-in-string "|"
+				    (propertize "|" 'face 'compilation-mode-line-run)
+				    (gethash property css-eldoc-hash-table)))))))
 
 (provide 'css-eldoc)
 ;;; css-eldoc.el ends here
