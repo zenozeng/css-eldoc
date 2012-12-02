@@ -94,6 +94,7 @@
   (puthash "max-width" "<length> | <percentage> | none | inherit" h)
   (puthash "min-height" "<length> | <percentage> | inherit" h)
   (puthash "min-width" "<length> | <percentage> | inherit" h)
+  (puthash "opacity" "<aplha> | inherit" h)
   (puthash "orphans" "<int> | inherit" h)
   (puthash "outline-color" "<color> | invert | inherit" h) 
   (puthash "outline-style" "<border-style> | inherit" h)
