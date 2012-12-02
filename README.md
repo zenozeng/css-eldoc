@@ -1,11 +1,11 @@
-PHP Eldoc Plugin
+CSS Eldoc Plugin
 ====================
 
 This is css-eldoc, a eldoc-mode plugin for CSS source code.
 
 Eldoc-mode is a MinorMode which shows you, in the echo area, the argument list of the function call you are currently writing. Very handy. By NoahFriedman. 
 
-![Alt text](https://raw.github.com/zenozeng/php-eldoc/master/screenshot.png)
+![Alt text](https://raw.github.com/zenozeng/css-eldoc/master/screenshot.png)
 
 Usage
 ======
