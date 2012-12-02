@@ -39,7 +39,7 @@
   (puthash "-webkit-background-origin" " border-box | padding-box | content-box" h)
   (puthash "-o-background-origin" " border-box | padding-box | content-box" h)
   (puthash "background-position" "[ [ <percentage> | <length> | left | center | right ] [ <percentage> | <length> | top | center | bottom ]? ] | [ [ left | center | right ] || [ top | center | bottom ] ] | inherit" h)
-  (puthash "background-repeat" "repeat | repeat-x | repeat-y | no-repeat | inherit" h)
+  (puthash "background-repeat" "repeat-x | repeat-y | repeat | space | round | no-repeat | inherit" h)
   (puthash "border" "width sytle color" h)
   (puthash "border-top" "width sytle color" h)
   (puthash "border-bottom" "width sytle color" h)
