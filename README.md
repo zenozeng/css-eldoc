@@ -1,7 +1,7 @@
 CSS Eldoc Plugin
 ====================
 
-*ATTENTION: I have not finished it yet*
+*ATTENTION: I have not finished CSS3 properties yet.*
 
 This is css-eldoc, a eldoc-mode plugin for CSS source code.
 
