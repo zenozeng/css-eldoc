@@ -3,7 +3,8 @@
 ;; Copyright (C) 2012  Zeno Zeng
 
 ;; Author: Zeno Zeng <zenoes@qq.com>
-;; Keywords: 
+;; Keywords:
+;; Time-stamp: <2012-12-02 21:27:32 Zeno Zeng>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
