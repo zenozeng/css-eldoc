@@ -29,27 +29,28 @@
 (require 'css-eldoc-hash-table)
 
 (defun css-eldoc-function()
-  (save-restriction
-    (narrow-to-region (line-beginning-position) (point))
-    (let* ((beg
-	    (save-excursion
-	      (+ 1 (or
-		    (re-search-backward "\\(;\\|{\\)" nil t)
-		    (- (point-min) 1)))))
-	   (end
-	    (save-excursion
-	      (or
-	       (re-search-backward ":" nil t)
-	       (point-max))))
-	   (property (buffer-substring-no-properties beg end)))
+  (ignore-errors
+    (save-restriction
+      (narrow-to-region (line-beginning-position) (point))
+      (let* ((beg
+	      (save-excursion
+		(+ 1 (or
+		      (re-search-backward "\\(;\\|{\\)" nil t)
+		      (- (point-min) 1)))))
+	     (end
+	      (save-excursion
+		(or
+		 (re-search-backward ":" nil t)
+		 (point-max))))
+	     (property (buffer-substring-no-properties beg end)))
 
-      (setq property (replace-regexp-in-string " " "" property))
+	(setq property (replace-regexp-in-string " " "" property))
 
-      (message property)
+	(message property)
 
-      (replace-regexp-in-string "|"
-				(propertize "|" 'face 'compilation-mode-line-run)
-				(gethash property css-eldoc-hash-table)))))
+	(replace-regexp-in-string "|"
+				  (propertize "|" 'face 'compilation-mode-line-run)
+				  (gethash property css-eldoc-hash-table))))))
 
 (provide 'css-eldoc)
 ;;; css-eldoc.el ends here
