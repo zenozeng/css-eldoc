@@ -44,9 +44,7 @@
 		 (point-max))))
 	     (property (buffer-substring-no-properties beg end)))
 
-	(setq property (replace-regexp-in-string " " "" property))
-
-	(message property)
+	(setq property (replace-regexp-in-string "[\t\n ]+" "" property))
 
 	(replace-regexp-in-string "|"
 				  (propertize "|" 'face 'compilation-mode-line-run)
