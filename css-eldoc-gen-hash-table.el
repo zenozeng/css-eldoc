@@ -144,6 +144,7 @@
   (puthash "white-space" "normal | pre | nowrap | pre-wrap | pre-line | inherit" h)
   (puthash "windows" "<int> | inherit" h)
   (puthash "width" "<length> | <percentage> | auto | inherit" h)
+  (puthash "word-break" "normal|break-all|hyphenate" h)
   (puthash "word-spacing" "normal | <length> | inherit" h)
   (puthash "z-index" "auto | <int> | inherit" h)
 
