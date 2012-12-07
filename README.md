@@ -13,7 +13,6 @@ Usage
 ======
 
 ```emacs-lisp
-(require 'css-eldoc)
 (add-hook 'css-mode-hook
 	  '(lambda ()
 	     (set
