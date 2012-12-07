@@ -130,6 +130,7 @@
   (puthash "speak" "normal | none | spell-out | inherit" h)
   (puthash "speech-rate" "<number> | x-slow | slow | medium | fast | x-fast | faster | slower | inherit" h)
   (puthash "stress" "<num> | inherit" h)
+  (puthash "table-layout" "auto | fixed | inherit" h)
   (puthash "text-align" "left | right | center | justify | inherit" h)
   (puthash "text-decoration" "none | [ underline || overline || line-through || blink ] | inherit" h)
   (puthash "text-indent" "<length> | <%> | inherit" h)

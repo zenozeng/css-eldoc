@@ -3,6 +3,11 @@ background
 background-attachment
 background-color
 background-image
+background-origin
+-moz-background-origin
+-webkit-background-origin
+-o-background-origin
+background-size
 background-position
 background-repeat
 border
@@ -63,6 +68,7 @@ max-height
 max-width
 min-height
 min-width
+opacity
 orphans
 outline-color
 outline-style
@@ -107,5 +113,7 @@ volume
 white-space
 windows
 width
+word-break
 word-spacing
+word-wrap
 z-index
