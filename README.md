@@ -12,14 +12,8 @@ Eldoc-mode is a MinorMode which shows you, in the echo area, the argument list o
 Usage
 ======
 
-```emacs-lisp
-(add-hook 'css-mode-hook
-	  '(lambda ()
-	     (set
-  	      (make-local-variable 'eldoc-documentation-function)
-  	      'css-eldoc-function)
- 	     (eldoc-mode)))
-```
+Use https://github.com/dimitri/el-get for an easy install, or put the css-eldoc somewhere in your load-path.
+
    
 Licensing
 =========
