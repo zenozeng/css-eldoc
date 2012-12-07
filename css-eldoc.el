@@ -29,6 +29,15 @@
 (require 'css-eldoc-hash-table)
 
 ;;;###autoload
+(add-hook 'css-mode-hook
+	  '(lambda ()
+	     (set
+	      (make-local-variable 'eldoc-documentation-function)
+	      'css-eldoc-function)
+	     (eldoc-mode)))
+
+
+;;;###autoload
 (defun css-eldoc-function()
   (ignore-errors
     (save-restriction
