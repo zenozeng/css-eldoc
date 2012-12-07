@@ -3,4 +3,4 @@
        :description "eldoc plugin for CSS"
        :type github
        :pkgname "zenozeng/css-eldoc"
-       :features nil)
+       :features css-eldoc)

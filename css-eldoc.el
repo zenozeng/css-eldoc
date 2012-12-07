@@ -28,6 +28,7 @@
 
 (require 'css-eldoc-hash-table)
 
+;;;###autoload
 (defun css-eldoc-function()
   (ignore-errors
     (save-restriction
