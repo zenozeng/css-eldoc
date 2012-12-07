@@ -146,6 +146,7 @@
   (puthash "width" "<length> | <percentage> | auto | inherit" h)
   (puthash "word-break" "normal|break-all|hyphenate" h)
   (puthash "word-spacing" "normal | <length> | inherit" h)
+  (puthash "word-wrap" "normal|break-word" h)
   (puthash "z-index" "auto | <int> | inherit" h)
 
   (find-file "css-eldoc-hash-table.el")
