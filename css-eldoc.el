@@ -29,15 +29,6 @@
 (require 'css-eldoc-hash-table)
 
 ;;;###autoload
-(add-hook 'css-mode-hook
-	  '(lambda ()
-	     (set
-	      (make-local-variable 'eldoc-documentation-function)
-	      'css-eldoc-function)
-	     (eldoc-mode)))
-
-
-;;;###autoload
 (defun css-eldoc-function()
   (ignore-errors
     (save-restriction
@@ -59,6 +50,14 @@
 	(replace-regexp-in-string "|"
 				  (propertize "|" 'face 'compilation-mode-line-run)
 				  (gethash property css-eldoc-hash-table))))))
+
+;;;###autoload
+(add-hook 'css-mode-hook
+	  '(lambda ()
+	     (set
+	      (make-local-variable 'eldoc-documentation-function)
+	      'css-eldoc-function)
+	     (eldoc-mode)))
 
 (provide 'css-eldoc)
 ;;; css-eldoc.el ends here
