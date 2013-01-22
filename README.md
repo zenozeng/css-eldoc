@@ -3,7 +3,7 @@ CSS Eldoc Plugin
 
 *ATTENTION: I have not finished CSS3 properties yet.*
 
-This is css-eldoc, a eldoc-mode plugin for CSS source code.
+This is css-eldoc, an eldoc-mode plugin for CSS source code.
 
 Eldoc-mode is a MinorMode which shows you, in the echo area, the argument list of the function call you are currently writing. Very handy. By NoahFriedman. 
 
