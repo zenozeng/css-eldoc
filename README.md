@@ -14,6 +14,31 @@ Usage
 
 Use https://github.com/dimitri/el-get for an easy install, or put the css-eldoc somewhere in your load-path.
 
+
+Attention!
+==========
+
+If your less mode's isearch became really slow, add the following code to your .emacs
+
+```emacs-lisp
+(defun isearch-forward-noeldoc ()
+  "close eldoc temperaily"
+  (interactive)
+  (eldoc-mode -1)
+  (isearch-forward)
+  (eldoc-mode 1))
+(add-hook 'less-css-mode-hook (lambda ()
+				(local-set-key [remap isearch-forward] 'isearch-forward-noeldoc)))
+
+(defun isearch-backward-noeldoc ()
+  "close eldoc temperaily"
+  (interactive)
+  (eldoc-mode -1)
+  (isearch-backward)
+  (eldoc-mode 1))
+(add-hook 'less-css-mode-hook (lambda ()
+				(local-set-key [remap isearch-backward] 'isearch-backward-noeldoc)))
+```
    
 Licensing
 =========
