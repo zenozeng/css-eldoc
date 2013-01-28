@@ -1,4 +1,4 @@
-;;; css-eldoc.el --- 
+;;; css-eldoc.el --- an eldoc-mode plugin for CSS source code
 
 ;; Copyright (C) 2012  Zeno Zeng
 
