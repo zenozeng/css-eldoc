@@ -19,7 +19,7 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-
+;;; To turn on css-eldoc call the function `css-eldoc-enable'
 ;;
 
 ;;; Code:
@@ -51,13 +51,22 @@
                                   (propertize "|" 'face 'compilation-mode-line-run)
                                   (gethash property css-eldoc-hash-table))))))
 
+(defun turn-on-css-eldoc ()
+  (set (make-local-variable 'eldoc-documentation-function) 'css-eldoc-function)
+  (eldoc-mode))
+
 ;;;###autoload
-(add-hook 'css-mode-hook
-          '(lambda ()
-             (set
-              (make-local-variable 'eldoc-documentation-function)
-              'css-eldoc-function)
-             (eldoc-mode)))
+(defun css-eldoc-enable ()
+  (interactive)
+  "Turn on css-eldoc in buffers where `css-mode' is active."
+  (add-hook 'css-mode-hook
+            #'turn-on-css-eldoc))
+
+;;;###autoload
+(defun css-eldoc-disable ()
+  (interactive)
+  "Disable css-eldoc."
+  (remove-hook 'css-mode-hook #'turn-on-css-eldoc))
 
 (provide 'css-eldoc)
 ;;; css-eldoc.el ends here
