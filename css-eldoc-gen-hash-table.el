@@ -1,9 +1,9 @@
-;;; css-eldoc-gen-hash-table.el --- 
+;;; css-eldoc-gen-hash-table.el ---
 
 ;; Copyright (C) 2012  Zeno Zeng
 
 ;; Author: Zeno Zeng <zenoes@qq.com>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -76,10 +76,10 @@
   (puthash "elevation" "<angle> | below | level | above | higher | lower | inherit" h)
   (puthash "empty-cells" "show | hide | inherit" h)
   (puthash "filter" "none | <filter-function> [ <filter-function> ]*" h)
-  (puthash "-webkit-filter" "none | <filter-function> [ <filter-function> ]*" h) 
-  (puthash "-moz-filter" "none | <filter-function> [ <filter-function> ]*" h) 
-  (puthash "-ms-filter" "none | <filter-function> [ <filter-function> ]*" h) 
-  (puthash "-o-filter" "none | <filter-function> [ <filter-function> ]*" h) 
+  (puthash "-webkit-filter" "none | <filter-function> [ <filter-function> ]*" h)
+  (puthash "-moz-filter" "none | <filter-function> [ <filter-function> ]*" h)
+  (puthash "-ms-filter" "none | <filter-function> [ <filter-function> ]*" h)
+  (puthash "-o-filter" "none | <filter-function> [ <filter-function> ]*" h)
   (puthash "float" "left | right | none | inherit" h)
   (puthash "font-family" "[[ <family-name> | <generic-family> ] [, <family-name>| <generic-family>]* ] | inherit" h)
   (puthash "font-size" "<size> | inherit" h)
@@ -106,7 +106,7 @@
   (puthash "min-width" "<length> | <percentage> | inherit" h)
   (puthash "opacity" "<aplha> | inherit" h)
   (puthash "orphans" "<int> | inherit" h)
-  (puthash "outline-color" "<color> | invert | inherit" h) 
+  (puthash "outline-color" "<color> | invert | inherit" h)
   (puthash "outline-style" "<border-style> | inherit" h)
   (puthash "outline-width" "<border-width> | inherit" h)
   (puthash "outline" "[ 'outline-color' || 'outline-style' || 'outline-width' ] | inherit" h)
