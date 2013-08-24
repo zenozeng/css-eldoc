@@ -14,6 +14,8 @@ Usage
 
 Use https://github.com/dimitri/el-get for an easy install, or put the css-eldoc somewhere in your load-path.
 
+After aquiring the files, put the following in the your .emacs `(turn-on-css-eldoc)`
+
 
 Attention!
 ==========
