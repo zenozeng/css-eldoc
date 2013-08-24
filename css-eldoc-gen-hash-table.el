@@ -24,10 +24,7 @@
 
 ;;; Code:
 
-(let (h)
-
-  ;; create a hash table
-  (setq h (make-hash-table :test 'equal))
+(let ((h (make-hash-table :test 'equal)))
 
   (puthash "azimuth" "<angle> | [[ left-side | far-left | left | center-left | center | center-right | right | far-right | right-side ] || behind ] | leftwards | rightwards | inherit" h)
   (puthash "background" "['background-color' || 'background-image' || 'background-repeat' || 'background-attachment' || 'background-position'] | inherit" h)
@@ -157,10 +154,10 @@
 
   (find-file "css-eldoc-hash-table.el")
   (kill-region (point-min) (point-max))
-  (insert-string "(setq css-eldoc-hash-table ")
-  (insert-string (prin1-to-string h))
-  (insert-string ")")
-  (insert-string "(provide 'css-eldoc-hash-table)")
+  (insert "(setq css-eldoc-hash-table ")
+  (insert (prin1-to-string h))
+  (insert ")")
+  (insert "(provide 'css-eldoc-hash-table)")
   (save-buffer))
 
 ;;; css-eldoc-gen-hash-table.el ends here
