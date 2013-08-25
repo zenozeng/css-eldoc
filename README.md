@@ -1,5 +1,4 @@
-CSS Eldoc Plugin
-====================
+# CSS Eldoc Plugin
 
 *ATTENTION: I have not finished CSS3 properties yet.*
 
@@ -9,16 +8,24 @@ Eldoc-mode is a MinorMode which shows you, in the echo area, the argument list o
 
 ![Alt text](https://raw.github.com/zenozeng/css-eldoc/master/screenshot.png)
 
-Usage
-======
+## CSS Support Status
+
+### Completed
+
+- CSS Marquee Module Level 3 (W3C Candidate Recommendation 5 December 2008)
+
+- CSS Backgrounds and Borders Module Level 3 (W3C Candidate Recommendation 24 July 2012)
+
+- CSS Snapshot 2010
+
+## Usage
 
 Use https://github.com/dimitri/el-get for an easy install, or put the css-eldoc somewhere in your load-path.
 
 After aquiring the files, put the following in the your .emacs `(turn-on-css-eldoc)`
 
 
-Attention!
-==========
+## Attention!
 
 If your less mode's isearch became really slow, add the following code to your .emacs
 
@@ -42,12 +49,11 @@ If your less mode's isearch became really slow, add the following code to your .
 				(local-set-key [remap isearch-backward] 'isearch-backward-noeldoc)))
 ```
    
-Licensing
-=========
+## Licensing
 
 This software is licensed under the GPL v3
 
-Copyright (C) 2012  Zeno Zeng
+Copyright (C) 2012-2013 Zeno Zeng
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
