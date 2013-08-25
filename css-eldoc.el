@@ -57,15 +57,15 @@
 
 ;;;###autoload
 (defun css-eldoc-enable ()
-  (interactive)
   "Turn on css-eldoc in buffers where `css-mode' is active."
+  (interactive)
   (add-hook 'css-mode-hook
             #'turn-on-css-eldoc))
 
 ;;;###autoload
 (defun css-eldoc-disable ()
-  (interactive)
   "Disable css-eldoc."
+  (interactive)
   (remove-hook 'css-mode-hook #'turn-on-css-eldoc))
 
 (provide 'css-eldoc)
