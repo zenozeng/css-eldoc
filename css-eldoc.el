@@ -3,7 +3,7 @@
 ;; Copyright (C) 2012  Zeno Zeng
 
 ;; Author: Zeno Zeng <zenoes@qq.com>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -19,8 +19,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-
-;; 
+;;; To turn on css-eldoc call the function `css-eldoc-enable'
+;;
 
 ;;; Code:
 (eval-when-compile
@@ -34,30 +34,39 @@
     (save-restriction
       (narrow-to-region (line-beginning-position) (point))
       (let* ((beg
-	      (save-excursion
-		(+ 1 (or
-		      (re-search-backward "\\(;\\|{\\)" nil t)
-		      (- (point-min) 1)))))
-	     (end
-	      (save-excursion
-		(or
-		 (re-search-backward ":" nil t)
-		 (point-max))))
-	     (property (buffer-substring-no-properties beg end)))
+              (save-excursion
+                (+ 1 (or
+                      (re-search-backward "\\(;\\|{\\)" nil t)
+                      (- (point-min) 1)))))
+             (end
+              (save-excursion
+                (or
+                 (re-search-backward ":" nil t)
+                 (point-max))))
+             (property (buffer-substring-no-properties beg end)))
 
-	(setq property (replace-regexp-in-string "[\t\n ]+" "" property))
+        (setq property (replace-regexp-in-string "[\t\n ]+" "" property))
 
-	(replace-regexp-in-string "|"
-				  (propertize "|" 'face 'compilation-mode-line-run)
-				  (gethash property css-eldoc-hash-table))))))
+        (replace-regexp-in-string "|"
+                                  (propertize "|" 'face 'compilation-mode-line-run)
+                                  (gethash property css-eldoc-hash-table))))))
+
+(defun turn-on-css-eldoc ()
+  (set (make-local-variable 'eldoc-documentation-function) 'css-eldoc-function)
+  (eldoc-mode))
 
 ;;;###autoload
-(add-hook 'css-mode-hook
-	  '(lambda ()
-	     (set
-	      (make-local-variable 'eldoc-documentation-function)
-	      'css-eldoc-function)
-	     (eldoc-mode)))
+(defun css-eldoc-enable ()
+  (interactive)
+  "Turn on css-eldoc in buffers where `css-mode' is active."
+  (add-hook 'css-mode-hook
+            #'turn-on-css-eldoc))
+
+;;;###autoload
+(defun css-eldoc-disable ()
+  (interactive)
+  "Disable css-eldoc."
+  (remove-hook 'css-mode-hook #'turn-on-css-eldoc))
 
 (provide 'css-eldoc)
 ;;; css-eldoc.el ends here

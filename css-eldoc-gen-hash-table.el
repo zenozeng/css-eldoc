@@ -1,9 +1,9 @@
-;;; css-eldoc-gen-hash-table.el --- 
+;;; css-eldoc-gen-hash-table.el ---
 
 ;; Copyright (C) 2012  Zeno Zeng
 
 ;; Author: Zeno Zeng <zenoes@qq.com>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,10 +24,7 @@
 
 ;;; Code:
 
-(let (h)
-
-  ;; create a hash table
-  (setq h (make-hash-table :test 'equal))
+(let ((h (make-hash-table :test 'equal)))
 
   (puthash "azimuth" "<angle> | [[ left-side | far-left | left | center-left | center | center-right | right | far-right | right-side ] || behind ] | leftwards | rightwards | inherit" h)
   (puthash "background" "['background-color' || 'background-image' || 'background-repeat' || 'background-attachment' || 'background-position'] | inherit" h)
@@ -41,11 +38,11 @@
   (puthash "background-size" "[ <length> | <percentage> | auto ]{1,2} | cover | contain" h)
   (puthash "background-position" "[ [ <percentage> | <length> | left | center | right ] [ <percentage> | <length> | top | center | bottom ]? ] | [ [ left | center | right ] || [ top | center | bottom ] ] | inherit" h)
   (puthash "background-repeat" "repeat-x | repeat-y | repeat | space | round | no-repeat | inherit" h)
-  (puthash "border" "width sytle color" h)
-  (puthash "border-top" "width sytle color" h)
-  (puthash "border-bottom" "width sytle color" h)
-  (puthash "border-left" "width sytle color" h)
-  (puthash "border-right" "width sytle color" h)
+  (puthash "border" "width style color" h)
+  (puthash "border-top" "width style color" h)
+  (puthash "border-bottom" "width style color" h)
+  (puthash "border-left" "width style color" h)
+  (puthash "border-right" "width style color" h)
   (puthash "border-collapse" "collapse | separate | inherit" h)
   (puthash "border-color" "[color | transparent]{1,4} | inhert" h)
   (puthash "border-spacing" "<length> <length>? | inherit" h)
@@ -76,10 +73,10 @@
   (puthash "elevation" "<angle> | below | level | above | higher | lower | inherit" h)
   (puthash "empty-cells" "show | hide | inherit" h)
   (puthash "filter" "none | <filter-function> [ <filter-function> ]*" h)
-  (puthash "-webkit-filter" "none | <filter-function> [ <filter-function> ]*" h) 
-  (puthash "-moz-filter" "none | <filter-function> [ <filter-function> ]*" h) 
-  (puthash "-ms-filter" "none | <filter-function> [ <filter-function> ]*" h) 
-  (puthash "-o-filter" "none | <filter-function> [ <filter-function> ]*" h) 
+  (puthash "-webkit-filter" "none | <filter-function> [ <filter-function> ]*" h)
+  (puthash "-moz-filter" "none | <filter-function> [ <filter-function> ]*" h)
+  (puthash "-ms-filter" "none | <filter-function> [ <filter-function> ]*" h)
+  (puthash "-o-filter" "none | <filter-function> [ <filter-function> ]*" h)
   (puthash "float" "left | right | none | inherit" h)
   (puthash "font-family" "[[ <family-name> | <generic-family> ] [, <family-name>| <generic-family>]* ] | inherit" h)
   (puthash "font-size" "<size> | inherit" h)
@@ -106,7 +103,7 @@
   (puthash "min-width" "<length> | <percentage> | inherit" h)
   (puthash "opacity" "<aplha> | inherit" h)
   (puthash "orphans" "<int> | inherit" h)
-  (puthash "outline-color" "<color> | invert | inherit" h) 
+  (puthash "outline-color" "<color> | invert | inherit" h)
   (puthash "outline-style" "<border-style> | inherit" h)
   (puthash "outline-width" "<border-width> | inherit" h)
   (puthash "outline" "[ 'outline-color' || 'outline-style' || 'outline-width' ] | inherit" h)
@@ -157,10 +154,10 @@
 
   (find-file "css-eldoc-hash-table.el")
   (kill-region (point-min) (point-max))
-  (insert-string "(setq css-eldoc-hash-table ")
-  (insert-string (prin1-to-string h))
-  (insert-string ")")
-  (insert-string "(provide 'css-eldoc-hash-table)")
+  (insert "(setq css-eldoc-hash-table ")
+  (insert (prin1-to-string h))
+  (insert ")")
+  (insert "(provide 'css-eldoc-hash-table)")
   (save-buffer))
 
 ;;; css-eldoc-gen-hash-table.el ends here
