@@ -58,9 +58,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
    
-## CSS Support Status
-
-### Completed 
+## Current Completed Work
 
 - CSS Image Values and Replaced Content Module Level 3 (W3C Candidate Recommendation 17 April 2012)
 
@@ -70,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 - CSS Snapshot 2010
 
-### TODO List
+## TODO List
 
 - CSS Multi-column Layout 
 
