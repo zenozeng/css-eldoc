@@ -60,6 +60,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
    
 ## Current Completed Work
 
+- CSS Speech Module (W3C Candidate Recommendation 20 March 2012)
+
 - CSS Multi-column Layout Module (W3C Candidate Recommendation 12 April 2011)
 
 - CSS Image Values and Replaced Content Module Level 3 (W3C Candidate Recommendation 17 April 2012)
@@ -71,8 +73,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 - CSS Snapshot 2010
 
 ## TODO List
-
-- CSS Speech
 
 - CSS Values and Units Level 3
 
