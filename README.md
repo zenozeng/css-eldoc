@@ -74,8 +74,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ## TODO List
 
-- CSS Values and Units Level 3
-
 - CSS Flexible Box Layout
 
 - CSS Text Decoration Module Level 3
