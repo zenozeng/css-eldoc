@@ -12,8 +12,6 @@ Eldoc-mode is a MinorMode which shows you, in the echo area, the argument list o
 
 ![Alt text](ss1.png)
 
-![Alt text](ss2.png)
-
 ## Usage
 
 Use https://github.com/dimitri/el-get for an easy install, or put the css-eldoc somewhere in your load-path.
