@@ -1,6 +1,6 @@
 ;;; css-eldoc.el --- an eldoc-mode plugin for CSS source code
 
-;; Copyright (C) 2012  Zeno Zeng
+;; Copyright (C) 2012-2014  Zeno Zeng
 
 ;; Author: Zeno Zeng <zenoes@qq.com>
 ;; Keywords:
