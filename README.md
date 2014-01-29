@@ -6,7 +6,13 @@ This is css-eldoc, an eldoc-mode plugin for CSS source code.
 
 Eldoc-mode is a MinorMode which shows you, in the echo area, the argument list of the function call you are currently writing. Very handy. By NoahFriedman. 
 
-![Alt text](https://raw.github.com/zenozeng/css-eldoc/master/screenshot.png)
+## Screen Shots
+
+![Alt text](ss0.png)
+
+![Alt text](ss1.png)
+
+![Alt text](ss2.png)
 
 ## Usage
 
@@ -39,11 +45,17 @@ If your less mode's isearch became really slow, add the following code to your .
 				(local-set-key [remap isearch-backward] 'isearch-backward-noeldoc)))
 ```
    
-## Licensing
+## License for DOC
+
+Licensed under the Creative Commons Attribution-ShareAlike license (CC-BY-SA), v2.5 or any later version.
+
+Copyright (C) [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+## License for Code
 
 This software is licensed under the GPL v3
 
-Copyright (C) 2012-2013 Zeno Zeng
+Copyright (C) 2012-2014 Zeno Zeng
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
