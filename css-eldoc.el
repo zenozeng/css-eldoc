@@ -40,9 +40,9 @@
                       (- (point-min) 1)))))
              (end
               (save-excursion
-                (or
-                 (re-search-backward ":" nil t)
-                 (point-max))))
+                (goto-char beg)
+                (forward-symbol 1)
+                (point)))
              (property (buffer-substring-no-properties beg end)))
 
         (setq property (replace-regexp-in-string "[\t\n ]+" "" property))
