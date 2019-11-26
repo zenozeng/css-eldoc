@@ -16,7 +16,7 @@ Docs are from [MDN CSS reference](https://developer.mozilla.org/en-US/docs/Web/C
 
 Use https://github.com/dimitri/el-get for an easy install, or put the css-eldoc somewhere in your load-path.
 
-After aquiring the files, put the following in the your .emacs `(turn-on-css-eldoc)`
+After acquiring the files, put the following in the your .emacs `(turn-on-css-eldoc)`
 
 
 ## Attention!
