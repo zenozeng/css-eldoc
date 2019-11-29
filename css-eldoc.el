@@ -53,7 +53,7 @@
 
 (defun turn-on-css-eldoc ()
   (set (make-local-variable 'eldoc-documentation-function) 'css-eldoc-function)
-  (eldoc-mode))
+  (eldoc-mode 1))
 
 ;;;###autoload
 (defun css-eldoc-enable ()
