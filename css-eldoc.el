@@ -53,6 +53,7 @@
 
 (defun turn-on-css-eldoc ()
   "Turn on css-eldoc in this buffer."
+  (interactive)
   (set (make-local-variable 'eldoc-documentation-function) 'css-eldoc-function)
   (eldoc-mode 1))
 
