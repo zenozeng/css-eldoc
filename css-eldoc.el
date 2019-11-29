@@ -52,6 +52,7 @@
                                   (gethash property css-eldoc-hash-table))))))
 
 (defun turn-on-css-eldoc ()
+  "Turn on css-eldoc in this buffer."
   (set (make-local-variable 'eldoc-documentation-function) 'css-eldoc-function)
   (eldoc-mode 1))
 
