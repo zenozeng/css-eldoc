@@ -24,7 +24,7 @@
 
 ;;; Code:
 (eval-when-compile
-  (require 'cl nil t))
+  (require 'cl-lib nil t))
 
 (require 'css-eldoc-hash-table)
 
